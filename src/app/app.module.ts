@@ -9,6 +9,10 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { HistorialPage } from '../pages/historial/historial';
 import { MapaPage } from '../pages/mapa/mapa';
+//PLUGGIN PARA LECTORA QR
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { HistorialProvider } from '../providers/historial/historial';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +37,8 @@ import { MapaPage } from '../pages/mapa/mapa';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
+    HistorialProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
