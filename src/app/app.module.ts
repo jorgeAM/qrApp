@@ -11,6 +11,7 @@ import { HistorialPage } from '../pages/historial/historial';
 import { MapaPage } from '../pages/mapa/mapa';
 //PLUGGIN PARA LECTORA QR
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { HistorialProvider } from '../providers/historial/historial';
 
 
@@ -38,6 +39,7 @@ import { HistorialProvider } from '../providers/historial/historial';
     StatusBar,
     SplashScreen,
     BarcodeScanner,
+    InAppBrowser,
     HistorialProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
