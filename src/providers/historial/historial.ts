@@ -1,11 +1,21 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+//MODELO
+import { ScanData } from '../../models/scan-data.model'
 
 @Injectable()
 export class HistorialProvider {
+  private historial:ScanData[] = [];
 
-  constructor(public http: HttpClient) {
-    console.log('Hello HistorialProvider Provider');
+  constructor() {}
+
+  agregarHistorial(texto:string){
+    let data = new ScanData(texto);
+    this.historial.push(data);
+    console.log(this.historial);
+  }
+
+  cargarHistorial(){
+    return this.historial;
   }
 
 }
